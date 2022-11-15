@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="loginAction" class="movie.action.user.LoginAction"/>
+    <bean id="loginDao" class="movie.userdao.LoginDao" abstract="true"/>
+    <bean id="signAction" class="movie.action.user.SignAction"/>
+    <bean id="signDao" class="movie.userdao.SignDao" abstract="true"/>
+    <bean id="retrieveAction" class="movie.action.user.RetrieveAction"/>
+    <bean id="retrieveDao" class="movie.userdao.RetrieveDao" abstract="true"/>
+
+    <bean id="lookNewsAction" class="movie.action.news.LookAction"/>
+    <bean id="LookDao" class="movie.newsdao.LookDao" abstract="true"/>
+    <bean id="addNewsAction" class="movie.action.news.addNewsAction"/>
+    <bean id="AddDao" class="movie.newsdao.AddDao" abstract="true"/>
+    <bean id="updateNewsAction" class="movie.action.news.updateNewsAction"/>
+    <bean id="UpdateDao" class="movie.newsdao.UpdateDao" abstract="true"/>
+    <bean id="deleteNewsAction" class="movie.action.news.deleteNewsAction"/>
+    <bean id="DeleteDao" class="movie.newsdao.DeleteDao" abstract="true"/>
+
+    <bean id="LookMovieAction" class="movie.action.movie.LookAction"/>
+    <bean id="LookMovieDao" class="movie.moviedao.LookMovieDao" abstract="true"/>
+    <bean id="AddMovieAction" class="movie.action.movie.addMovieAction"/>
+    <bean id="AddMovieDao" class="movie.moviedao.AddMovieDao" abstract="true"/>
+    <bean id="UpdateMovieAction" class="movie.action.movie.updateMovieAction"/>
+    <bean id="UpdateMovieDao" class="movie.moviedao.UpdateMovieDao" abstract="true"/>
+    <bean id="deleteMovieAction" class="movie.action.movie.deleteMovieAction"/>
+    <bean id="DeleteMovieDao" class="movie.moviedao.DeleteMovieDao" abstract="true"/>
+</beans>

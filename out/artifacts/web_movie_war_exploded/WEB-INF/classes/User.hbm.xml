@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="movie.hibernate.User" table="user" schema="web">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="useraccount">
+            <column name="useraccount" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="usersex">
+            <column name="usersex" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="userage">
+            <column name="userage" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="userpassword">
+            <column name="userpassword" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="usertell">
+            <column name="usertell" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="useraddress">
+            <column name="useraddress" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web_movie:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/web_movie_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="web_movie/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web_movie" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2" />
+          <element id="library" level="project" name="Hibernate 5.4.11-5.4.11" />
+          <element id="library" level="project" name="Spring-5.2.3.RELEASE" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../mysql-connector-java-8.0.12.jar" />
+          <element id="library" level="project" name="commons-io-2.11.0" />
+          <element id="library" level="project" name="commons-fileupload-1.4" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

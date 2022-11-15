@@ -1,0 +1,88 @@
+.delete-submit {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    border-radius: 32px;
+    -webkit-box-shadow: 0 0 4px rgba(255, 0, 0, 0.35);
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.35);
+}
+
+.delete-submit:before, .delete-submit:after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+}
+
+.delete-submit:before {
+    top: 28px;
+    left: -4px;
+    width: 4px;
+    height: 10px;
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.delete-submit:after {
+    top: -4px;
+    bottom: -4px;
+    right: -4px;
+    width: 36px;
+}
+
+.delete-button {
+    position: relative;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    padding: 0 0 48px;
+    /* Fix wrong positioning in Firefox 9 & older (bug 450418) */
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: none;
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+    /* Must use another pseudo element for the gradient background because Webkit */
+    /* clips the background incorrectly inside elements with a border-radius.     */
+}
+
+.delete-button:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background: #ff0000;
+    border-radius: 24px;
+    background-image: -webkit-linear-gradient(top, #ff0000, #ff0000);
+    background-image: -moz-linear-gradient(top, #ff0000, #ff0000);
+    background-image: -o-linear-gradient(top, #ff0000, #ff0000);
+    background-image: linear-gradient(to bottom, #ff0000, #ff0000);
+    -webkit-box-shadow: inset 0 0 0 1px #ff0000, 0 0 0 5px rgba(255, 0, 0, 0.16);
+    box-shadow: inset 0 0 0 1px #ff0000, 0 0 0 5px rgba(255, 0, 0, 0.16);
+}
+
+.delete-button:active:before {
+    background: red;
+    background-image: -webkit-linear-gradient(top, red, red);
+    background-image: -moz-linear-gradient(top, red, red);
+    background-image: -o-linear-gradient(top, red, red);
+    background-image: linear-gradient(to bottom, red, red);
+}
+
+.delete-button:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    width: 25px;
+    height: 19px;
+    background: url("../img/delete-button.png") 0 0 no-repeat;
+}

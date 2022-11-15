@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/web?useSSL=false&amp;serverTimezone=UTC</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+    <mapping class="movie.entity.User"/>
+    <mapping resource="movie/entity/User.hbm.xml"/>
+    <mapping class="movie.entity.News"/>
+    <mapping resource="movie/entity/News.hbm.xml"/>
+    <mapping class="movie.entity.Movie"/>
+    <mapping resource="movie/entity/Movie.hbm.xml"/>
+    <mapping class="movie.entity.MovieType"/>
+    <mapping resource="movie/entity/MovieType.hbm.xml"/>
+    <mapping class="movie.entity.NewsType"/>
+    <mapping resource="movie/entity/NewsType.hbm.xml"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

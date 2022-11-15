@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.multipart.maxSize" value="31457280"/>
+    <package name="movie.action" extends="struts-default">
+        <!--用户登录-->
+        <action name="loginAction" class="movie.action.user.LoginAction">
+            <result name="success">main.jsp</result>
+            <result name="error">login.jsp</result>
+        </action>
+        <!--用户注册-->
+        <action name="signAction" class="movie.action.user.SignAction">
+            <result name="success">login.jsp</result>
+            <result name="error">sign.jsp</result>
+        </action>
+        <!--用户找回密码-->
+        <action name="retrieveAction" class="movie.action.user.RetrieveAction">
+            <result name="success">login.jsp</result>
+            <result name="error">retrieve.jsp</result>
+        </action>
+
+
+        <!--浏览新闻-->
+        <action name="lookNewsAction" class="movie.action.news.LookAction">
+            <result name="success">news.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--添加新闻-->
+        <action name="addNewsAction" class="movie.action.news.addNewsAction">
+            <result name="success">news.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--修改新闻-->
+        <action name="updateNewsAction" class="movie.action.news.updateNewsAction">
+            <result name="success">news.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--删除新闻-->
+        <action name="deleteNewsAction" class="movie.action.news.deleteNewsAction">
+            <result name="success">news.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+
+        <!--浏览电影-->
+        <action name="LookMovieAction" class="movie.action.movie.LookAction">
+            <result name="success">movie.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--添加电影-->
+        <action name="AddMovieAction" class="movie.action.movie.addMovieAction">
+            <interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">102400000</param>
+            </interceptor-ref>
+
+            <result name="success">movie.jsp</result>
+            <result name="error" >error.jsp</result>
+            <result name="input">error.jsp</result>
+        </action>
+        <!--修改电影-->
+        <action name="UpdateMovieAction" class="movie.action.movie.updateMovieAction">
+            <result name="success">movie.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--删除电影-->
+        <action name="deleteMovieAction" class="movie.action.movie.deleteMovieAction">
+            <result name="success">movie.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+
+        <!--浏览电影类型-->
+        <action name="LookMovieTypeAction" class="movie.action.movietype.LookTypeAction">
+            <result name="success">movietype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--添加电影类型-->
+        <action name="AddMovieTypeAction" class="movie.action.movietype.addMovieTypeAction">
+            <result name="success">movietype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--修改电影类型-->
+        <action name="UpdateMovieTypeAction" class="movie.action.movietype.updateMovieTypeAction">
+            <result name="success">movietype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <!--删除电影类型-->
+        <action name="deleteMovieTypeAction" class="movie.action.movietype.deleteMovieTypeAction">
+            <result name="success">movietype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <action name="AddNewsTypeAction" class="movie.action.newstype.addNewsTypeAction">
+            <result name="success">newstype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="UpdateNewsTypeAction" class="movie.action.newstype.updateNewsTypeAction">
+            <result name="success">newstype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="deleteNewsTypeAction" class="movie.action.newstype.deleteNewsTypeAction">
+            <result name="success">newstype.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+    </package>
+</struts>
